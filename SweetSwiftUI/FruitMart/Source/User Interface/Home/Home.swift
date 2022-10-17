@@ -10,7 +10,11 @@ import SwiftUI
 
 struct Home: View {
   var body: some View {
-    Text("Hello, World!")
+      VStack {
+          ExtractedView()
+          ExtractedView()
+          ExtractedView()
+      }
   }
 }
 
@@ -19,3 +23,4 @@ struct Home_Previews: PreviewProvider {
     Home()
   }
 }
+
