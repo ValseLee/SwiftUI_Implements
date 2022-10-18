@@ -9,8 +9,21 @@
 import SwiftUI
 
 struct FruitListView: View {
+    let fruits = ["사과", "배", "포도", "바나나"]
+    let drinks = ["물", "우유", "탄산수"]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            Text("Fruits").font(.largeTitle)
+            ForEach(fruits, id: \.self) {
+                Text($0)
+            }
+            EmptyView()
+            Text("Drinks").font(.largeTitle)
+            ForEach(drinks, id: \.self) {
+                Text($0)
+            }
+        }
     }
 }
 
