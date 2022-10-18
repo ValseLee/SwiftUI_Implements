@@ -13,17 +13,25 @@ struct FruitListView: View {
     let drinks = ["물", "우유", "탄산수"]
     
     var body: some View {
+        let titles = ["Fruits", "Drinks"]
+        let dataArr = [fruits, drinks]
+        
         List {
-            Text("Fruits").font(.largeTitle)
-            ForEach(fruits, id: \.self) {
-                Text($0)
+            ForEach(dataArr.indices) { index in
+                Section {
+                    ForEach(dataArr[index], id: \.self) {
+                        Text($0)
+                    }
+                } header: {
+                    Text(titles[index]).font(.largeTitle)
+                } footer: {
+                    HStack {
+                        Spacer()
+                        Text("\(dataArr[index].count)건")
+                    }
+                }
             }
-            EmptyView()
-            Text("Drinks").font(.largeTitle)
-            ForEach(drinks, id: \.self) {
-                Text($0)
-            }
-        }
+        }.listStyle(.grouped)
     }
 }
 
