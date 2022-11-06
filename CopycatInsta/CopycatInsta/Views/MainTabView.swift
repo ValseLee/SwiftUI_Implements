@@ -9,17 +9,38 @@ import SwiftUI
 
 struct MainTabView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+		TabView {
+			MainFeedView()
+				.tabItem {
+					Image(systemName: "house")
+				}
+			
+			SearchView()
+				.tabItem {
+					Image(systemName: "magnifyingglass.circle")
+				}
+			
+			UploadPostView()
+				.tabItem {
+					Image(systemName: "plus.square")
+				}
+			
+			
+			NotificationView()
+				.tabItem {
+					Image(systemName: "bag")
+				}
+			
+			ProfileView()
+				.tabItem {
+					Image(systemName: "person.crop.circle")
+				}
+		}
+		.accentColor(.black)
     }
 }
 
-struct MainView_Previews: PreviewProvider {
+struct MainTabView_Previews: PreviewProvider {
     static var previews: some View {
         MainTabView()
     }

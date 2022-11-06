@@ -9,7 +9,11 @@ import SwiftUI
 
 struct MainFeedView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+		ScrollView {
+			ForEach(0..<15) { _ in
+				MainFeedView()
+			}
+		}
     }
 }
 
