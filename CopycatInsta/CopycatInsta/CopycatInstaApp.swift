@@ -11,7 +11,7 @@ import SwiftUI
 struct CopycatInstaApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
     }
 }

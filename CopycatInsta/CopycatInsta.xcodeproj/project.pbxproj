@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7044FB692917C64F00A53947 /* CopycatInstaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7044FB682917C64F00A53947 /* CopycatInstaApp.swift */; };
-		7044FB6B2917C64F00A53947 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7044FB6A2917C64F00A53947 /* ContentView.swift */; };
+		7044FB6B2917C64F00A53947 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7044FB6A2917C64F00A53947 /* MainView.swift */; };
 		7044FB6D2917C64F00A53947 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7044FB6C2917C64F00A53947 /* Assets.xcassets */; };
 		7044FB702917C64F00A53947 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7044FB6F2917C64F00A53947 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		7044FB652917C64F00A53947 /* CopycatInsta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CopycatInsta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7044FB682917C64F00A53947 /* CopycatInstaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopycatInstaApp.swift; sourceTree = "<group>"; };
-		7044FB6A2917C64F00A53947 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7044FB6A2917C64F00A53947 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		7044FB6C2917C64F00A53947 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7044FB6F2917C64F00A53947 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,7 +52,11 @@
 			isa = PBXGroup;
 			children = (
 				7044FB682917C64F00A53947 /* CopycatInstaApp.swift */,
-				7044FB6A2917C64F00A53947 /* ContentView.swift */,
+				7044FB762917C71200A53947 /* Model */,
+				7044FB782917C72B00A53947 /* VIewModels */,
+				7044FB772917C72900A53947 /* Views */,
+				7044FB792917C72F00A53947 /* API */,
+				7044FB7A2917C73A00A53947 /* Utilities */,
 				7044FB6C2917C64F00A53947 /* Assets.xcassets */,
 				7044FB6E2917C64F00A53947 /* Preview Content */,
 			);
@@ -65,6 +69,42 @@
 				7044FB6F2917C64F00A53947 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7044FB762917C71200A53947 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7044FB772917C72900A53947 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7044FB6A2917C64F00A53947 /* MainView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7044FB782917C72B00A53947 /* VIewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VIewModels;
+			sourceTree = "<group>";
+		};
+		7044FB792917C72F00A53947 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		7044FB7A2917C73A00A53947 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7044FB6B2917C64F00A53947 /* ContentView.swift in Sources */,
+				7044FB6B2917C64F00A53947 /* MainView.swift in Sources */,
 				7044FB692917C64F00A53947 /* CopycatInstaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
