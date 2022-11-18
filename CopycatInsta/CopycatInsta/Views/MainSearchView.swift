@@ -8,8 +8,25 @@
 import SwiftUI
 
 struct MainSearchView: View {
+	@State private var searchText: String = ""
+	@State private var gridSystem: [GridItem] = [
+		GridItem(.flexible(), spacing: 0),
+		GridItem(.flexible(), spacing: 0),
+		GridItem(.flexible(), spacing: 0)
+	]
+	
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+		ScrollView {
+			// 상단 검색뷰
+			SearchBar(searchText: $searchText)
+				.padding()
+			
+			LazyVGrid(columns: gridSystem) {
+				ForEach(0..<15, id: \.self) { index in
+					Image(systemName: "star")
+				}
+			}
+		}
     }
 }
 

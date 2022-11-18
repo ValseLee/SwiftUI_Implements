@@ -22,6 +22,7 @@ struct MainFeedCell: View {
 				Text("User Name")
 					.font(.system(size: 14, weight: .semibold))
 			}
+			.padding([.leading, .bottom], 8)
 			
 			// Post Image
 			Image(systemName: "sunset")
@@ -30,7 +31,7 @@ struct MainFeedCell: View {
 				.clipped()
 			
 			// Action Btns
-			HStack(spacing: 8) {
+			HStack(spacing: 16) {
 				Button {
 					print()
 				} label: {
@@ -60,18 +61,31 @@ struct MainFeedCell: View {
 						.frame(width: 20, height: 20)
 						.clipped()
 				}
-			}.foregroundColor(.black)
+			}
+			.padding([.leading, .top], 8)
+			.foregroundColor(.black)
+			
 			
 			// Caption
-			HStack {
-				Text("0 Likes")
-			}
+			feedPostInfo
+				.padding(.horizontal, 8)
+		}
+    }
+	
+	private var feedPostInfo: some View {
+		VStack(alignment: .leading, spacing: 2) {
+		
+			Text("0 Likes")
+				.font(.callout)
+				.fontWeight(.semibold)
 			
 			HStack {
-				Text("UserName")
+				Text("UserName ")
 					.font(.title3)
 				
-				Text("Feed Cell Description")
+				+
+				
+				Text("Feed Cell Description Feed Cell Description, Feed Cell Description, Feed Cell Description")
 					.font(.body)
 			}
 			
@@ -79,8 +93,7 @@ struct MainFeedCell: View {
 				.font(.caption)
 				.foregroundColor(.gray)
 		}
-		.padding()
-    }
+	}
 }
 
 struct MainFeedCell_Previews: PreviewProvider {

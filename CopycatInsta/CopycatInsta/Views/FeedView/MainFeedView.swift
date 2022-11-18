@@ -10,9 +10,12 @@ import SwiftUI
 struct MainFeedView: View {
     var body: some View {
 		ScrollView {
-			ForEach(0..<15) { _ in
-				MainFeedView()
+			LazyVStack(spacing: 32) {
+				ForEach(0..<15, id: \.self) { _ in
+					MainFeedCell()
+				}
 			}
+			.padding(.top, 10)
 		}
     }
 }
