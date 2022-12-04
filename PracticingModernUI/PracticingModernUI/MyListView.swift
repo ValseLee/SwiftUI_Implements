@@ -7,9 +7,30 @@
 
 import SwiftUI
 
-struct MyListView: View {
+struct MyListView: View {	
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+		GeometryReader {
+			let safeArea = $0.safeAreaInsets
+			let size = $0.size
+			
+			NavigationStack {
+				MainListView(safeArea: safeArea, viewSize: size)
+					.ignoresSafeArea(.container, edges: .top)
+					.preferredColorScheme(.dark)
+//					.toolbarBackground(Color.indigo, for: .navigationBar)
+//					.toolbarBackground(.visible, for: .navigationBar)
+//					.toolbar {
+//						ToolbarItem(placement: .cancellationAction) {
+//							Button {
+//								print("?")
+//							} label: {
+//								Image(systemName: "chevron.left")
+//									.foregroundColor(.white)
+//							}
+//						}
+//					}
+			}
+		}
     }
 }
 
